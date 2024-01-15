@@ -38,3 +38,13 @@ is at the expected commit before pushing.
 	If it has changed, the push will be rejected, preventing accidental overwrites.
     
     Command : 'git push origin <branch-name> --force-with-lease'
+
+
+Ex. When I commited something on remote repo, but not pulled it in the local, 
+and applied force-with-lease, this is the output: 
+
+
+jspnlp@kislayJosh:~/Documents/Assignment2/assi2/samarth$ git push origin samarth --force-with-lease
+To github.com:samrocks03/samarth-assignment-2.git
+ ! [rejected]        samarth -> samarth (stale info)
+error: failed to push some refs to 'github.com:samrocks03/samarth-assignment-2.git'
