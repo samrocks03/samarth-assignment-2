@@ -1,0 +1,50 @@
+Q. Difference between --force push and --force-with-lease, You have to show the use of both, 
+also you have to show in what scenario --force-with-lease is used?
+
+-->
+
+force and force-with-lease allow us to push and 'override' the usual restrictions
+on pushing changes 
+_____________________________________________________________________________________________
+* Force-->
+	Force allows one to forcefully push changes to remote repository, even if 
+the results are in 'non-forward' updates or overwrites changes that others have pushed in
+the remote repository online.
+
+	It comes with the risk of potentially disrupting collaboration and causing data loss
+for others sharing the same branch.
+
+    Command: 'git push <branch-name> --force'
+
+In my repo:
+	jspnlp@kislayJosh:~/Documents/Assignment2/assi2/samarth$ git push origin samarth --force
+	Enumerating objects: 36, done.
+	Counting objects: 100% (36/36), done.
+	Delta compression using up to 8 threads
+	Compressing objects: 100% (32/32), done.
+	Writing objects: 100% (35/35), 4.78 KiB | 978.00 KiB/s, done.
+	Total 35 (delta 14), reused 0 (delta 0), pack-reused 0
+	remote: Resolving deltas: 100% (14/14), done.
+	To github.com:samrocks03/samarth-assignment-2.git
+	 + fabed84...0143c3f samarth -> samarth (forced update)
+
+
+______________________________________________________________________________________________
+* force-with-lease -->
+	It's safer alternative to '--force', since it protects against overwriting changes on 
+the remote repo that one is not aware of! It checks if the remote reference (remote branch) 
+is at the expected commit before pushing.
+	
+	If it has changed, the push will be rejected, preventing accidental overwrites.
+    
+    Command : 'git push origin <branch-name> --force-with-lease'
+
+
+Ex. When I commited something on remote repo, but not pulled it in the local, 
+and applied force-with-lease, this is the output: 
+
+
+jspnlp@kislayJosh:~/Documents/Assignment2/assi2/samarth$ git push origin samarth --force-with-lease
+To github.com:samrocks03/samarth-assignment-2.git
+ ! [rejected]        samarth -> samarth (stale info)
+error: failed to push some refs to 'github.com:samrocks03/samarth-assignment-2.git'

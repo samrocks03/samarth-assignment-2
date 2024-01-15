@@ -1,0 +1,35 @@
+Q . How to delete one commit or multiple commits permanently Write command for it.
+
+-->
+
+One can delete one or multiple commits by 
+ 'git reset --hard HEAD~n' 
+
+such that, n represents number of commits!
+
+
+This is a basic illustation of it:
+
+jspnlp@kislayJosh:~/Documents/Assignment2/assi2/samarth$ git log -3
+commit 8d164f620bccbbbeeeb7a99ae3c23347a3f5f8f3 (HEAD -> samarth)
+Author: Samarth Kulkarni <svkulkarni23@gmail.com>
+Date:   Mon Jan 15 14:16:30 2024 +0530
+
+    un-necessary comment deleted-3
+
+commit 8eab0d31cfa70c6cf4e708995f1d88d9f26966cc
+Author: Samarth Kulkarni <svkulkarni23@gmail.com>
+Date:   Mon Jan 15 14:15:59 2024 +0530
+
+    un-necessary comment deleted-2
+
+commit d4461334625dbb9e9fed12d2b34b382719a2c220
+Author: Samarth Kulkarni <svkulkarni23@gmail.com>
+Date:   Mon Jan 15 14:15:38 2024 +0530
+
+    un-necessary comment deleted-1
+______________________________________________________________________________________
+jspnlp@kislayJosh:~/Documents/Assignment2/assi2/samarth$ git reset --hard HEAD~2
+HEAD is now at d446133 un-necessary comment deleted-1
+______________________________________________________________________________________
+
