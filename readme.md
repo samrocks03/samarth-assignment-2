@@ -1,7 +1,7 @@
 # Assignment – Module 2
 You have to show me a working demo for each question. Also, write answers for each question in a git repo itself in the following hierarchy.
 
-1. Everyone will create the sperate branch of your name.
+1. Everyone will create the seperate branch of your name.
 
 2. Create a folder of your name in repository.
 
