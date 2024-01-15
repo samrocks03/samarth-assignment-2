@@ -1,0 +1,22 @@
+Q. How to set multiple remote repositories for the same project? 
+Explain the use case. you should have a working demo of it.
+
+-->
+
+How:
+ - One can add multiple remote repo's in a project by : 
+	-'git remote add origin <repo1_link>'
+	-'git remote add backup_repo <repo2_link>'
+______________________________________________________________
+UseCase:
+ - Setting multiple remote repositories is an important part, when you want to get the 
+back-up of your code.
+
+ - This works well all the times.
+______________________________________________________________
+Demo:
+
+ - The demo for this question is present in another repo: 
+ 
+ - Link : https://github.com/samrocks03/backup-repo-a2
+______________________________________________________________
