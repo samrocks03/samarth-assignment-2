@@ -1,0 +1,32 @@
+Q. What is cherry-pick? Explain the use case of it also write steps to do it.
+-->
+
+- It's a powerful command which enables git commits to be picked by preference and appended 
+to the current working HEAD.
+ 
+Use Cases:
+1."Team collaboration": front-end and back-end developers can collaborate for a feature that 
+they both need to utilize.
+
+2. "undoing changes and restoring lost commits" : Sometimes, a feature is not required and wont 
+be merged into 'main' repo. This pull request might get closed without merging, here cherry-pick comes handy with the help of getting the commit hash by 'git log ..' or 'git reflog '.
+
+Example with steps:
+i. This is repo with a branch state looking somewhat like this:
+  a - b - c - d   `Main`
+       \
+        \  
+         e - f - g `Feature`
+
+ii. We will execute our cherry pick command : 
+      'git cherry-pick <commit-sha>' 
+    Here , commit-sha is the hash-id for that specific commit.
+
+iii. After executing, it will look like:
+   
+ a - b - c - d - f  `Main`
+      \
+       \
+        e - f - g  `Feature`
+
+  Thus, we can see that, f has been picked in main branch
