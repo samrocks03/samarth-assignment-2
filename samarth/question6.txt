@@ -1,0 +1,47 @@
+Q. How to un stage changes from the staged area. write command for it.
+-->
+
+- When one adds a file in git repo, it goes through various stages,
+- such that, first it's untracked, then it moves to staging area, and then local repo, 
+ afterwards, if required to remote...
+
+- Now, to unstage changes from the staged area, we would write a command like: 
+   "git restore --staged <file_name.extension>"
+
+
+My example : 
+
+jspnlp@kislayJosh:~/Documents/Assignment2/assi2/samarth$ nano unstage_demo.txt
+______________________________________________________________________________
+jspnlp@kislayJosh:~/Documents/Assignment2/assi2/samarth$ git status
+On branch samarth
+Your branch is up to date with 'origin/samarth'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	unstage_demo.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+______________________________________________________________________________________________
+jspnlp@kislayJosh:~/Documents/Assignment2/assi2/samarth$ git add unstage_demo.txt 
+______________________________________________________________________________________________
+jspnlp@kislayJosh:~/Documents/Assignment2/assi2/samarth$ git status
+On branch samarth
+Your branch is up to date with 'origin/samarth'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   unstage_demo.txt
+______________________________________________________________________________________________
+jspnlp@kislayJosh:~/Documents/Assignment2/assi2/samarth$ git restore --staged unstage_demo.txt
+______________________________________________________________________________________________
+jspnlp@kislayJosh:~/Documents/Assignment2/assi2/samarth$ git status
+On branch samarth
+Your branch is up to date with 'origin/samarth'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	unstage_demo.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+______________________________________________________________________________________________
